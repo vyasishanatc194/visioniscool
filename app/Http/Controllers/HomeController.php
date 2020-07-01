@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $base_dir = 'assets/collections_old/';
         $collection_data = [];
-        $states = array_diff(scandir($base_dir), ['..', '.', '.DS_Store']);
+        //$states = array_diff(scandir($base_dir), ['..', '.', '.DS_Store']);
         
         // foreach ($states as $state) {
         //     echo $state.'<br/>';
@@ -96,9 +96,9 @@ class HomeController extends Controller
         // }
         
         $statesDB = State::all();
-        $images = Image::where('city_id','1')->with('getRefFile')->get()->pluck('getRefFile.file_url');
         
-        return view('welcome',compact('statesDB','images'));
+        
+        return view('welcome',compact('statesDB'));
     }
 
     public function getImage(Request $request)
