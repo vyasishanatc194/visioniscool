@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index');
 Route::post('sign-in', 'Auth\LoginController@loginA');
 Auth::routes();
 Route::get('get/image', 'HomeController@getImage');
+Route::get('thankyou', 'HomeController@thankyou');
+Route::any('newsletter', 'HomeController@newsLetter');
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {

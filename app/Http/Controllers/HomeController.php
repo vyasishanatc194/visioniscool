@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\State;
 use App\City;
 use App\Image;
+
 class HomeController extends Controller
 {
     /**
@@ -108,15 +109,59 @@ class HomeController extends Controller
             $query->where('refe_type', $device.'_image');
         }])->get()->pluck('getRefFile.file_url');
         if($images->count() > 0){
+            $i = (array)$images;
+            $imageResponse = [];
+            foreach($i as $value){
+                $imageResponse = $value;
+            }
             $result['message'] = 'Image Found';
             $result['code'] = 200;
-            $result['data'] = $images;
+            $result['data'] = array_filter($imageResponse);
         }else{
             $result['message'] = 'Images not found';
             $result['code'] = 400;
             $result['data'] = [];
         }
         return response()->json($result, $result['code']);
+    }
+
+    public function newsLetter(Request $request){
+        
+        $curl = curl_init();
+        $url = "https://api.constantcontact.com/v2/contacts?action_by=ACTION_BY_VISITOR&api_key=".env('CONSTANT_CONTACT_API_KEY', 'j6jb65ggtha5cyjfhck2xxqt');
+        $dataArray = [
+            "email_addresses" => ["email_address"=>$request->email],
+            "status"=> "ACTIVE"
+        ];
+        $dataArray = array (
+            'status' =>'ACTIVE',
+            'lists' => array( array( "id"=>'1350487760' ) ),
+            'email_addresses' => array( array( 'status' => 'ACTIVE' , 'email_address' => $request->email ) ),
+        );
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS =>json_encode($dataArray),
+        CURLOPT_HTTPHEADER => array(
+            "Authorization: Bearer ". env('CONSTANT_CONTACT_API_TOKEN', 'j6jb65ggtha5cyjfhck2xxqt'),
+            "Content-Type: application/json"
+        ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        return $response;
+    }
+
+    public function thankyou(Request $request){
+        return view('thankyou');
     }
 
     

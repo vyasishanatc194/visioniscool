@@ -1,0 +1,339 @@
+/* @font-face {
+  font-family: 'cocogooseregular';
+  src: url("../fonts/cocogoose_trial-webfont.woff2") format("woff2"), url("../fonts/cocogoose_trial-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.arrow-span-right {
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='40px' height='53px' viewBox='0 0 40 53' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Eright-arrow%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Path-2' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpolygon id='right-arrow' points='5.57776048e-13 52.462 39.559 29.062 39.559 23.4 5.57776048e-13 0 5.57776048e-13 4.907 36.44 26.169 5.57776048e-13 47.554'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: inline-block;
+}
+
+.container-1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thank-you-section {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: 'Montserrat';
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 35%;
+}
+
+.thank-you-section .thank-you-div {
+  padding: 150px 0 130px 0;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+.thank-you-section .thank-top-div {
+  padding: 0;
+  margin: 0 0 60px 0;
+  position: relative;
+}
+
+.thank-you-section .thank-top-div h1 {
+  padding: 0;
+  margin: 0 0 0px 0;
+  color: #DF8E2F;
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 700;
+  font-family: 'cocogooseregular', arial, sans-serif;
+}
+
+.thank-you-section .thank-top-div h2 {
+  padding: 0;
+  margin: 0 0 0px 0;
+  color: #0E0A10;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  font-family: 'cocogooseregular', arial, sans-serif;
+  width: 100%;
+}
+
+.thank-you-section .thank-top-div h3 {
+  padding: 0;
+  margin: 0 0 15px 0;
+  font-size: 42px;
+  line-height: 46px;
+  font-weight: 700;
+  max-width: 600px;
+  font-family: 'cocogooseregular', arial, sans-serif;
+}
+
+.thank-you-section .thank-top-div h4 {
+  padding: 0;
+  margin: 0 0 15px 0;
+  color: #0E0A10;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  max-width: 600px;
+}
+
+.thank-you-section .thank-top-div p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #0E0A10;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  max-width: 370px;
+}
+
+.thank-you-section .thank-top-div span.big-text {
+  color: #fff;
+  display: block;
+  font-size: 120%;
+}
+
+.thank-you-section .thank-top-div span.bold-text {
+  font-weight: 700;
+}
+
+.thank-you-section .thank-top-div .button-group-row {
+  padding: 20px 20px 20px 20px;
+  margin: 30px 0;
+  position: relative;
+  background-color: #84B470;
+  border-radius: 16px;
+  max-width: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.thank-you-section .thank-top-div .button-group-row .left-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: calc(100% - 100px);
+}
+
+.thank-you-section .thank-top-div .button-group-row .right-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100px;
+}
+
+.thank-you-section .thank-top-div .button-group-row .btn-common.btn-arrow-round {
+  padding: 0px 0 0 0px;
+  margin: 0;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+}
+
+.thank-you-section .thank-top-div .button-group-row .btn-common.btn-arrow-round:hover {
+  opacity: 0.6;
+}
+
+.thank-you-section .thank-top-div .button-group-row .btn-common.btn-arrow-round .arrow-span-right {
+  margin: 0 0 0 7px;
+}
+
+.thank-you-section .thank-bottom-div {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.thank-you-section .thank-bottom-div h4 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #0E0A10;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+.thank-you-section .thank-bottom-div ul.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 30px 0;
+}
+
+.thank-you-section .thank-bottom-div ul.social-list .btn-social {
+  background-color: #0E0A10;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+  color: #cccecd;
+  font-size: 21px;
+  text-transform: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.thank-you-section .thank-bottom-div ul.social-list .btn-social:hover, .thank-you-section .thank-bottom-div ul.social-list .btn-social:focus {
+  text-decoration: none;
+}
+
+.thank-you-section .vison-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+}
+
+.thank-you-section .vison-div .vison-left {
+  padding-right: 15px;
+  border-right: 2px solid #282010;
+}
+
+.thank-you-section .vison-div .vison-left h3 {
+  color: #282010;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.thank-you-section .vison-div .vison-left h4 {
+  color: #019fbc;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.thank-you-section .vison-div .vison-right {
+  padding: 0 15px;
+}
+
+.thank-you-section .vison-div .vison-right .see-more {
+  padding: 6px 12px;
+  background-color: #df8e2f;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .thank-you-section {
+    background-position: center;
+  }
+  .thank-you-section .thank-you-div {
+    padding: 100px 0;
+  }
+  .thank-you-section .thank-you-div h1 {
+    font-size: 55px;
+    line-height: 56px;
+    margin-bottom: 10px;
+  }
+  .thank-you-section .thank-you-div h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .thank-you-section .thank-you-div h4 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .thank-you-section .thank-you-div .thank-top-div h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .thank-you-section .thank-you-div .thank-top-div h2 span {
+    font-size: 20px;
+  }
+  .thank-you-section .thank-you-div .thank-top-div .button-group-row .left-btn-group {
+    width: calc(100% - 60px);
+  }
+  .thank-you-section .thank-you-div .thank-top-div .button-group-row .right-btn-group {
+    width: 60px;
+  }
+  .thank-you-section .thank-you-div .thank-top-div .button-group-row .right-btn-group .btn-arrow-round {
+    height: 40px;
+    width: 40px;
+  }
+  .thank-you-section .vison-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .thank-you-section .vison-div .vison-left {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #282010;
+    border-right: 0;
+  }
+  .thank-you-section .vison-div .vison-right {
+    padding-top: 20px;
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
