@@ -10,10 +10,10 @@ use App\City;
 use App\Image;
 class GallaryController extends Controller
 {
-    public function datatableData()
+    public function datatableData(Request $request)
     {
-        $record = Image::with('getRefFile')->get();
-        
+        $search = $request->search;
+        $record = Image::with('getAllRefFile','getCity')->get();
         return Datatables::of($record)->make(true);
     }
     /**

@@ -12,6 +12,7 @@ $(document).ready(function () {
   });
 
   function slickInit() {
+    $("#loading").show();
     let selected = $('.location-selector select').val();
     const device = !isMobile ? 'desktop' : 'mobile';
     $.get(ajaxUrl, { city: selected,device : device }, function (data, textStatus, jqXHR) {
@@ -30,9 +31,10 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         lazyLoad: 'ondemand',
-        arrows: !isMobile ? 'desktop' : 'mobile',
+        arrows: !isMobile,
         fade: true,
       });
+      $("#loading").hide();
     });
     
   }

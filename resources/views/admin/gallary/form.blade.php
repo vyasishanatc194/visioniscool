@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-6 col-12">
                     <fieldset class="form-group">
-                        <label for="inputGroupFile01">Upload Desktop Image</label>
+                        <label for="inputGroupFile01">Upload Desktop Image<small>( 1280 X 1920,1920 X 1280 for best resolution )</small></label>
                         <div class="custom-file">
                             <input type="file" name="image" accept="image/*" class="custom-file-input" id="inputGroupFile01">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-6 col-12">
                     <fieldset class="form-group">
-                        <label for="inputGroupFile01">Upload Mobile Image</label>
+                        <label for="inputGroupFile01">Upload Mobile Image<small>( 375 X 250,375 X 563 for best resolution )</small></label>
                         <div class="custom-file">
                             <input type="file" name="mobile_image" accept="image/*" class="custom-file-input" id="inputGroupFile01">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>

@@ -21,6 +21,12 @@
 
 <body>
     <div class="wrapper">
+        <div id="loading">
+            <div class="loader-center">
+                <img id="loading-image" src="{!! asset('assets/images/loading.gif') !!}"
+                    alt="Loading..." />
+            </div>
+        </div>
         <div class="container">
             <div class="content main-content">
                 <div class="main-background-wrapper">

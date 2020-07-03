@@ -10,7 +10,7 @@ class Image extends Model
     protected $fillable = ['city_id'];
 
     public function getCity(){
-        return $this->hasOne('App\City', 'id', 'city_id');
+        return $this->hasOne('App\City', 'id', 'city_id')->leftJoin('states','states.id','cities.state_id');
     }
     
     public function getRefFile(){
@@ -21,5 +21,6 @@ class Image extends Model
     public function getAllRefFile(){
         return $this->hasMany('App\Refefile', 'refe_field_id', 'id');
     }
+    
 
 }

@@ -14,12 +14,12 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(UserSeeder::class);
         $users = ['0' => [
-                'name' => ' Admin User',
-                'first_name' => 'Admin',
-                'last_name' => '',
+                'name' => 'Will Grant',
+                'first_name' => 'Will',
+                'last_name' => 'Grant',
 				'status'=>'active',
-				'email'=>'admin@gmail.com',
-				'password'=>'123456',
+				'email'=>'getvision@willgrantvision.com',
+				'password'=>'8932()*&^',
 				'role'=>'AU',
 				'utype'=>'admin',
 				'verified'=>1,

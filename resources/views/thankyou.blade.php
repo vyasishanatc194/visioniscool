@@ -89,9 +89,9 @@
 
                                 <div class="social-div">
                                     <ul class="social-list">
-                                        <li><a href="#" class="btn-social"> <i class="fab fa-facebook-f"></i> </a></li>
-                                        <li><a href="#" class="btn-social"> <i class="fab fa-twitter"></i> </a></li>
-                                        <li><a href="#" class="btn-social"> <i class="fab fa-instagram"></i> </a></li>
+                                        <li><a target="_blank" href="https://www.facebook.com/willgrantvision/" class="btn-social"> <i class="fab fa-facebook-f"></i> </a></li>
+                                        <li><a target="_blank" href="https://twitter.com/willgrantvision" class="btn-social"> <i class="fab fa-twitter"></i> </a></li>
+                                        <li><a target="_blank" href="https://www.instagram.com/willgrantvision/" class="btn-social"> <i class="fab fa-instagram"></i> </a></li>
                                     </ul>
                                 </div>
 

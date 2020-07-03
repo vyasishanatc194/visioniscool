@@ -9,7 +9,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Gallary</h4>
+                            <h4 class="card-title">Gallery</h4>
                             <div class="d-flex justify-content-end ">
                                 <a href="{{route('gallary.create')}}" class="btn btn-outline-primary round mr-1 mb-1 ">Add Image</a>
                             </div>
@@ -26,6 +26,7 @@
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Image</th>
+                                                            <th>City/State</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -45,6 +46,11 @@
 @endsection
 
 @push('css')
+<style>
+    .table-responsive{
+        overflow-x:hidden !important;
+    }
+</style>
 <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/datatables/dataTables.bootstrap4.min.css')}}">
 @endpush
 
@@ -61,6 +67,7 @@
                 processing: true,
                 serverSide: true,
                 autoWidth: false,
+                searching: false,
                 stateSave: false,
                 order: [0, "DESC"],
                 responsive: true,
@@ -79,18 +86,33 @@
                     { "data": "id","name":"id","searchable": false,"width":"8%"},
                     { 
                         "data": null,
-                        "searchable": false,
+                        "searchable" :false,
+                        "orderable" : false,
                         "render" : function (o){
-                            
-                            if(o.get_ref_file != null){
-                                return '<img src="'+o.get_ref_file.file_url+'" width="100px" height="auto" />'
+                            if(o.get_all_ref_file != null){
+                                if(o.get_all_ref_file[0].file_url != ''){
+                                    return '<img src="'+o.get_all_ref_file[0].file_url+'" width="100px" height="auto" />'
+                                }
+                                else if(o.get_all_ref_file.length == 2){
+                                    return '<img src="'+o.get_all_ref_file[1].file_url+'" width="100px" height="auto" />'
+                                }
+                                
                             }
                             return null
                             
                         }
 
                     },
-                    
+                    {
+                        "data" : null,
+                        "searchable" :false,
+                        "orderable" : false,
+                        "width" : "4%" ,
+                        "render" : function (o) {
+                            return o.get_city.city_name+'/'+o.get_city.state_name;
+                        
+                        }
+                    },
                     { 
                         "data" : null,
                         "searchable" :false, 
@@ -98,7 +120,6 @@
                         "width" : "4%" , 
                         "render" :  function (o) { 
                             var d = " <a href='javascript:void(0);' class='del-item btn btn-danger btn-sm' data-id="+o.id+" title='@lang('tooltip.common.icon.delete')'><i class='fa fa-trash action_icon '></i></a>"; 
-                            
                             return d;
         
                          }
