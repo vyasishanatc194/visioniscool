@@ -1,20 +1,16 @@
+
+AuthType Basic 
+AuthName "dev.visioniscool.com" 
+AuthUserFile /var/www/dev.visioniscool.com/visioniscool/public/.htpasswd 
+require valid-user
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
 
-    <IfModule mod_headers.c>
-        Header always set X-XSS-Protection "1; mode=block"
-        Header always set X-Content-Type-Options "nosniff"
+    
 
-        # Set Cache-Control and Expires headers
-        <filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4)$">
-        Header set Cache-Control "max-age=2592000, private"
-        Header set Expires "access plus 1 year"
-        </filesMatch>
-		
-
-    </IfModule>
+    
     RewriteEngine On
 
     # Handle Authorization Header
@@ -31,3 +27,10 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+<FilesMatch "\.(?i:gif|jpe?g|png|ico|css|js|swf)$">
+
+  <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=172800, public, must-revalidate"
+  </IfModule>
+
+</FilesMatch>

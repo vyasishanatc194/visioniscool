@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  
+  // $('img').load(function () {
+  //   $(this).css('background', 'none');
+  // });
   var isMobile = false; //initiate as false
   // device detection
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -21,7 +23,7 @@ $(document).ready(function () {
       
       Object.keys(collection_data).map(function (item) {
         if (collection_data[item] != null){
-          imageObject.push('<div><img data-lazy="' + collection_data[item] + '" /></div>')
+          imageObject.push('<div><img class="loading" data-lazy="' + collection_data[item] + '" /></div>')
         }
       })
       
@@ -31,8 +33,10 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         lazyLoad: 'ondemand',
-        arrows: !isMobile,
+        arrows: true,
+        // arrows: !isMobile,
         fade: true,
+        ease: 'Pow4.easeIn'
       });
       $("#loading").hide();
     });
