@@ -97,30 +97,39 @@
                 $("#modal-getpair").modal('hide');
             });
             $("#join").click(function(){
-                var email = $("#email").val();
-                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                if(regex.test(email)){
-                    $.ajax({
-                        url: '{{url('newsletter')}}',
-                        type: 'post',
-                        data: {
-                           email: email
-                        },
-                        headers: {
-                            "X-CSRF-TOKEN": "{{ csrf_token() }}"
-                        },
-                        dataType: 'json',
-                        success: function (data) {
-                            window.location.href = "{{url('thankyou')}}";
-                        }
-                    });
-                    
-                }else{
-                    alert('Email is not valid, Please enter valid email ')
-                }
-            
+                emailSend();
             })
+            $(document).on("keypress", "#email", function(e){
+                if(e.which == 13){
+                    emailSend();
+                }
+            });
+            
         });
+
+        function emailSend(){
+            var email = $("#email").val();
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(regex.test(email)){
+            $.ajax({
+                url: '{{url('newsletter')}}',
+                type: 'post',
+                data: {
+                    email: email
+                },
+                headers: {
+                    "X-CSRF-TOKEN": "{{ csrf_token() }}"
+                },
+                dataType: 'json',
+                success: function (data) {
+                    window.location.href = "{{url('thankyou')}}";
+                }
+            });
+            
+            }else{
+               $("#email").css("border", "2px solid red");
+            }
+        }
     </script>
     
     <script type="text/javascript" src="{{ asset('assets/js/script.js')}}"></script>
