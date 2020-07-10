@@ -1,4 +1,4 @@
-<div id="modal-readmore" class="modal fade modal-custom" role="dialog">
+<div id="modal-readmore" class="modal fade modal-custom modal-readmore" role="dialog">
     <div class="modal-dialog">
     
         <!-- Modal content-->
@@ -7,7 +7,8 @@
             <div class="modal-body">
     
                 <div class="modal-content-helpus">
-    
+                    <button class="close close-btn" data-dismiss="modal"><i class="fa fa-close"></i></button>
+
                     <div class="helpus-frame">
                         <img src="{{ asset('assets/images/helpus.png')}}" alt="">
                     </div>
@@ -18,7 +19,7 @@
                         to see the board. Many of these students simply won’t
                         wear glasses out of fear of not looking “cool”. </p>
     
-                    <p><span>Help us</span> show them just how cool vision is...</p>
+                    <h3><span>Help us</span> show them just how cool vision is...</h3>
     
                 </div>
     

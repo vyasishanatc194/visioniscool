@@ -27,7 +27,7 @@
                     alt="Loading..." />
             </div>
         </div>
-        <div class="container">
+        <div class="container p-0">
             <div class="content main-content">
                 <div class="main-background-wrapper">
                     <div class="main-background-content">
@@ -60,6 +60,8 @@
                 <div class="modal-body">
     
                     <div class="modal-content-getpair">
+                        <button class="close close-btn" data-dismiss="modal"><i class="fa fa-close"></i></button>
+
                         <h3>Get a pair of glasses for free!</h3>
     
                         <div class="galss-frame">
@@ -76,8 +78,10 @@
     
                         <div class="modal-footer-content">
                             <h3>Inspire Confidence. Give Vision</h3>
-                            <a href="#" data-toggle="modal" data-target="#modal-readmore" class="readmore-text">READ MORE </a>
-                            <a href="#" class="privacy-policy">Privacy Policy</a>
+                            <div class="link-group-div">
+                                <a href="#" data-toggle="modal" data-target="#modal-readmore" class="readmore-text">READ MORE </a>
+                                <a href="#" class="privacy-policy">Privacy Policy</a>
+                            </div>
                         </div>
                     </div>
     

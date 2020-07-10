@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html, body {
   padding: 0;
   margin: 0;
@@ -144,10 +146,10 @@ html, body {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-  width: 50px !important;
+  /* width: 50px !important; */
   height: 50px !important;
   top: 50%;
-
+  transition: width 0.8s;
 }
 .slick-next {
   right: 40px;
@@ -155,11 +157,65 @@ html, body {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-  width: 50px !important;
+  /* width: 50px !important; */
   height: 50px !important;
   top: 50%;
-
+  transition: width 0.8s;
 }
+
+/*  Changes in dev.visioniscool.com ( 06-07-2020 )  */
+
+.modal.modal-custom .modal-dialog { max-width: 900px; width: 100%; height: auto; min-height: calc(100% - 80px); display: flex; align-items: center; justify-content: center; }
+.modal.modal-custom .modal-dialog .modal-content{ width: 100%; font-family: 'Raleway', sans-serif; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair{ width: 100%; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair h3 { font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 32px; line-height: 40px; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .form-group .form-control { font-family: 'Raleway', sans-serif; height: 38px; width: 100%; border-radius: 10px; font-size: 14px; font-weight: 600; color: #131313; text-transform: uppercase; line-height: 24px; background-color: rgba(255, 255, 255, 0.69); border: 1px solid rgb(218, 218, 218); box-shadow: none; text-align: center; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .form-group .form-control::-webkit-input-placeholder {  font-weight: 600; color: #131313; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .form-group .form-control::-moz-placeholder {  font-weight: 600; color: #131313; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .form-group .form-control:-ms-input-placeholder {  font-weight: 600; color: #131313; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .form-group .form-control:-moz-placeholder {  font-weight: 600; color: #131313; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .btn-div .btn-join-us { font-family: 'Raleway', sans-serif; background-color: #7cc646; padding: 4px 20px; font-weight: 300; height: auto; min-height: 34px; font-size: 22px; line-height: 26px; transition: all 0.8s; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .btn-div .btn-join-us:hover{ background-color: #77b946; }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .btn-div { margin-bottom: 30px; }
+.modal-custom .modal-dialog a.readmore-text { font-family: 'Raleway', sans-serif; color: #010000; font-weight: 600; font-size: 12px; text-transform: uppercase; margin: 0 0 35px 0; display: inline-block; transition: all 0.8s; text-decoration: none; } 
+.modal-custom .modal-dialog a.readmore-text:hover{ color: rgba(255, 255, 255, 0.8);}
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .modal-footer-content .privacy-policy{ font-family: 'Raleway', sans-serif; color: #010000; font-weight: 600; font-size: 12px; text-transform: uppercase; transition: all 0.8s; text-decoration: none;  }
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .modal-footer-content .privacy-policy:hover{ color: rgba(255, 255, 255, 0.8);}
+.modal-custom .modal-dialog .modal-body .modal-content-getpair .galss-frame { width: 290px; }
+.modal-custom .modal-dialog .close-btn { height: 35px; width: 35px; border-radius: 100%; border: 1px solid #fff; position: absolute; right: 15px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; opacity: 1; top: 15px; font-size: 40px; -webkit-box-shadow: none; box-shadow: none; outline: 0; 
+  font-size: 20px; overflow: hidden; height: 30px; width: 30px; padding: 4px 1px 3px 0;
+}
+
+.modal-custom .close-btn .fa.fa-close { -webkit-text-stroke: 0px #ffffff; position: relative; top: 0; background-size: contain; background-repeat: no-repeat; background-position: center; height: 17px; width: 17px; display: inline-block;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='13px' height='17px' viewBox='0 0 13 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EGroup 2%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Group-2' fill='%23ffffff'%3E%3Cpolygon id='Rectangle' transform='translate(6.750000, 8.307383) rotate(35.000000) translate(-6.750000, -8.307383) ' points='6.33085242 -0.985259724 7.5 -1 7.16914758 17.6000254 6 17.6147656'%3E%3C/polygon%3E%3Cpolygon id='Rectangle-Copy' transform='translate(6.750000, 8.307383) rotate(-35.000000) translate(-6.750000, -8.307383) ' points='6 -1 7.16914758 -0.985259724 7.5 17.6147656 6.33085242 17.6000254'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.modal-custom .close-btn .fa.fa-close:before { content: ""; }
+
+.modal-custom .modal-dialog .modal-body .modal-content-helpus p { font-size: 22px; line-height: 36px; color: #ffffff; margin-bottom: 20px; font-weight: 300; }
+.modal-custom .modal-dialog .modal-body .modal-content-helpus h3 { font-size: 22px; line-height: 36px; color: #ffffff; margin-top: 10px; margin-bottom: 30px; font-weight: 500; }
+.modal-custom .modal-dialog .modal-body .modal-content-helpus h3 span { color: #f88803; }
+
+
+.slick-prev.slick-arrow { left: 0; height: auto !important; min-height: 100vh !important; top: 0; 
+  /* width: calc(50% - 215px) !important;  */
+  background-position: 40px; }
+.slick-next.slick-arrow { right: 0; height: auto !important; min-height: 100vh !important; top: 0; 
+  /* width: calc(50% - 215px) !important;  */
+  background-position: calc(100% - 40px); }
+
+.modal-readmore { overflow-x: hidden; overflow-y: auto; }
+
+.location-selector { z-index: 999; }
+.marker{ z-index: 999; }
+.credit{ z-index: 999; width: 115px; }
+
+.slick-slide img{ width: auto; }
+
+.container.p-0 {
+  padding: 0;
+}
+
+/* End of Changes in dev.visioniscool.com ( 06-07-2020 )  */
 
 @media only screen and (max-width: 480px) {
 
@@ -232,4 +288,26 @@ html, body {
   width: 100px;
   z-index: 100;
   background: transparent url('../images/loader.svg') center no-repeat;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  .modal.modal-custom .modal-dialog .modal-body { padding: 40px 20px; }
+  .modal.modal-custom .modal-dialog { max-width: 100%; width: 100%; min-height: 100%; margin: 0; padding: 10px 10px; }
+
+  .modal-custom .modal-dialog .modal-body .modal-content-helpus { padding-top: 40px; margin-bottom: 20px; max-width: 600px; }
+  .modal-custom .modal-dialog .modal-body .modal-content-helpus p { font-size: 18px; line-height: 28px; }
+  .modal-custom .modal-dialog .modal-body .modal-content-helpus h3 { font-size: 18px; line-height: 28px; margin-top: 10px; margin-bottom: 10px; }
+
+  .slick-next.slick-arrow { min-height: 100vh !important; top: 0; background-position: center; width: 50px !important; height: 50px !important; }
+  .slick-prev.slick-arrow{ min-height: 100vh !important; top: 0; background-position: center; width: 50px !important; height: 50px !important; }
+
+} 
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .modal.modal-custom .modal-dialog .modal-body { padding: 40px 20px; }
+  .modal.modal-custom .modal-dialog { max-width: 100%; width: 100%; min-height: 100%; margin: 0; padding: 10px 10px; }
+
 }
