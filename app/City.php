@@ -13,6 +13,9 @@ class City extends Model
      * @var string
      */
     protected $table = 'cities';
+
+    protected $fillable = ['city_name','state_id'];
+
     public function getImage(){
         return $this->hasMany('App\Image', 'city_id', 'id');
     }

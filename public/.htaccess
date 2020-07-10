@@ -1,8 +1,8 @@
 
-AuthType Basic 
-AuthName "dev.visioniscool.com" 
-AuthUserFile /var/www/dev.visioniscool.com/visioniscool/public/.htpasswd 
-require valid-user
+#AuthType Basic 
+#AuthName "dev.visioniscool.com" 
+#AuthUserFile /var/www/dev.visioniscool.com/visioniscool/public/.htpasswd 
+#require valid-user
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

@@ -134,4 +134,20 @@ class GallaryController extends Controller
             return redirect('admin/gallary');
         }
     }
+
+    public function updateSorting(Request $request){
+        $imageId = $request->imageId;
+        $oldSort = $request->oldSort;
+        $newSort = $request->newSort;
+        if($oldSort < $newSort){
+            Image::whereBetween('sort', [$oldSort,$newSort])->where('id','!=',$imageId)->decrement('sort', 1);
+        }else{
+            Image::where('id','!=',$imageId)->whereBetween('sort', [$newSort,$oldSort])->whereOr('sort','=',$newSort)->increment('sort', 1);
+        }
+        Image::where('id',$imageId)->update(['sort'=> $newSort ]);
+        //update(['sort' => 'images']);
+        $result['message'] = \Lang::get('common.responce_msg.record_updated_succes');;
+        $result['code'] = 200;
+        return response()->json($result, $result['code']);
+    }
 }

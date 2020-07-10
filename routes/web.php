@@ -24,6 +24,13 @@ Route::any('newsletter', 'HomeController@newsLetter');
 Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
     Route::get('/','Admin\HomeController@index');
     Route::get('gallary/datatable', 'Admin\GallaryController@datatableData');
+    Route::post('gallary/sort/update', 'Admin\GallaryController@updateSorting');
     Route::resource('gallary', 'Admin\GallaryController');
+
+    Route::resource('state', 'Admin\StateController');
+    Route::get('/state-data', 'Admin\StateController@datatable');
+
+    Route::resource('city', 'Admin\CityController');
+    Route::get('/city-data', 'Admin\CityController@datatable');
     
 });

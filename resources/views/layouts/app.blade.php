@@ -35,6 +35,7 @@
         
     
     @include('includes.js')
+    @stack('modal')
 </body>
 
 </html>

@@ -27,6 +27,7 @@
                                                             <th>ID</th>
                                                             <th>Image</th>
                                                             <th>City/State</th>
+                                                            <th>Sort</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -69,7 +70,7 @@
                 autoWidth: false,
                 searching: false,
                 stateSave: false,
-                order: [0, "DESC"],
+                order: [3, "ASC"],
                 responsive: true,
                 columnDefs: [
                     { responsivePriority: 1, targets: 0 },
@@ -111,6 +112,15 @@
                         "render" : function (o) {
                             return o.get_city.city_name+'/'+o.get_city.state_name;
                         
+                        }
+                    },
+                    { 
+                        "data": null,
+                        "name":"sort",
+                        "orderable": true,
+                        "searchable" :false,
+                        "render" : function (o){
+                            return '<input type="number" name="sort" data-oldsort="'+o.sort+'" value="'+o.sort+'" class="sortInput" data-image-id="'+o.id+'" />'
                         }
                     },
                     { 
@@ -159,6 +169,34 @@
                     });
                 }
             });
+
+            $(document).on('focusout','.sortInput',function(e){
+                var imageId = $(this).attr('data-image-id')
+                var oldSort = $(this).attr('data-oldsort')
+                var newSort = $(this).val();
+                if(oldSort != newSort){
+                    $.ajax({
+                        type: "post",
+                        url: '{{url('admin/gallary/sort/update')}}',
+                        data: {
+                            imageId:imageId,
+                            oldSort:oldSort,
+                            newSort:newSort,
+                        },
+                        headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function (data) {
+                            toastr.success('Action Success!', data.message);
+                            datatable.fnDraw(false);
+                        },
+                        error: function (xhr, status, error) {
+                            var erro = ajaxError(xhr, status, error);
+                            toastr.error('Action Not Proceed!',erro)
+                        }
+                    });
+                }
+            })
         });
     </script>
 @endpush

@@ -105,9 +105,12 @@ class HomeController extends Controller
     public function getImage(Request $request)
     {
         $device = $request->device;
+        if(Image::where('sort',0)->get()->count() > 0){
+            \DB::statement("UPDATE `images` SET `sort` = images.id");
+        }
         $images = Image::where('city_id',$request->city)->with(['getRefFile' => function($query) use ($device){
             $query->where('refe_type', $device.'_image');
-        }])->get()->pluck('getRefFile.file_url');
+        }])->orderBy('sort','ASC')->get()->pluck('getRefFile.file_url');
         if($images->count() > 0){
             $i = (array)$images;
             $imageResponse = [];

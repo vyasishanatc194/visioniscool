@@ -28,6 +28,13 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('state.index')}}"><i class="ft-list"></i><span class="menu-title" data-i18n="Forms">State</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="{{route('city.index')}}"><i class="ft-list"></i><span class="menu-title"
+                            data-i18n="Forms">City</span></a>
+                </li>
             </ul>
         </div>
     </div>
